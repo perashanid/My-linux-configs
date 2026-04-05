@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=qBittorrent
-Exec=qbittorrent --no-splash %U
-X-GNOME-Autostart-enabled=true
-NoDisplay=true
-StartupWMClass=qBittorrent
-X-KDE-autostart-after=panel
