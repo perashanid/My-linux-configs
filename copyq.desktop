@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=CopyQ
+Comment=Clipboard Manager
+Exec=sh -c "copyq &"
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=2
+NoDisplay=true
+StartupNotify=false
