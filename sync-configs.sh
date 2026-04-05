@@ -1,7 +1,7 @@
 #!/bin/bash
 # Sync COSMIC configs from system to repository
 
-echo "🔄 Syncing COSMIC configs to repository..."
+echo " Syncing COSMIC configs to repository..."
 
 # Create directories if they don't exist
 mkdir -p config-backups scripts autostart system

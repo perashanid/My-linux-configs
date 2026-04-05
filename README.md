@@ -21,6 +21,7 @@ cosmic-config/
 │   ├── BUTTON_CONFIG_REFERENCE.md  # Configure buttons (screenshot, pause, lock, etc.)
 │   ├── ADDITIONAL_CONFIGS.md   # Battery management, qBittorrent fixes
 │   ├── LAZYGIT_GUIDE.md        # Git made easy with lazygit
+│   ├── RCLONE_GUIDE.md         # Mount Google Drive with rclone
 │   └── QUICK_REFERENCE.md      # Quick lookup card
 │
 ├── config-backups/              # COSMIC configuration backups
@@ -30,7 +31,8 @@ cosmic-config/
 │   └── xkb_config             # (copy for restoration)
 │
 ├── scripts/                     # Utility scripts
-│   └── screenshot              # Screenshot tool (grim+slurp+swappy)
+│   ├── screenshot              # Screenshot tool (grim+slurp+swappy)
+│   └── setup-rclone.sh         # Automated Google Drive setup with rclone
 │
 ├── autostart/                   # Autostart applications
 │   ├── copyq.desktop           # Clipboard manager
@@ -109,6 +111,16 @@ System optimizations and fixes.
 
 ### [Lazygit Guide](docs/LAZYGIT_GUIDE.md)
 Complete guide to using lazygit - git made easy with a terminal UI.
+
+### [Rclone Guide](docs/RCLONE_GUIDE.md)
+Mount Google Drive(s) on your desktop with rclone.
+
+**Includes**:
+- Automated setup script
+- Multiple Google Drive accounts
+- Autostart configuration
+- Performance optimization
+- Troubleshooting
 
 ### [Quick Reference](docs/QUICK_REFERENCE.md)
 One-page quick lookup for keybindings and commands. Print this!

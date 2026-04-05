@@ -1,7 +1,7 @@
 #!/bin/bash
 # Restore COSMIC configs from repository to system
 
-echo "🔄 Restoring COSMIC configs from repository..."
+echo " Restoring COSMIC configs from repository..."
 echo ""
 
 # Function to ask for confirmation
