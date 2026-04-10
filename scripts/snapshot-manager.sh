@@ -1,4 +1,4 @@
-#!/bin/bash
+ beautifull wallpaer #!/bin/bash
 # Btrfs Snapshot Manager for Snapper
 # Manages manual snapshots with limit of 10
 

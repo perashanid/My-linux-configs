@@ -23,6 +23,7 @@ cosmic-config/
 │   ├── LAZYGIT_GUIDE.md        # Git made easy with lazygit
 │   ├── RCLONE_GUIDE.md         # Mount Google Drive with rclone
 │   ├── SNAPSHOT_GUIDE.md       # Btrfs snapshot management with Snapper
+│   ├── SDDM_THEME_GUIDE.md     # Change SDDM login screen themes
 │   └── QUICK_REFERENCE.md      # Quick lookup card
 │
 ├── config-backups/              # COSMIC configuration backups
@@ -134,6 +135,16 @@ Manage system snapshots with Snapper on Btrfs.
 - Automatic snapshots before updates
 - Disk space management
 - Snapshot limit configuration (10 max)
+
+### [SDDM Theme Guide](docs/SDDM_THEME_GUIDE.md)
+Change SDDM login screen themes.
+
+**Includes**:
+- Install new themes with qylock
+- Switch between installed themes
+- Customize theme settings
+- Troubleshooting theme issues
+- SDDM vs lockscreen differences
 
 ### [Quick Reference](docs/QUICK_REFERENCE.md)
 One-page quick lookup for keybindings and commands. Print this!
