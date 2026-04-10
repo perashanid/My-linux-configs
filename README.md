@@ -22,6 +22,7 @@ cosmic-config/
 │   ├── ADDITIONAL_CONFIGS.md   # Battery management, qBittorrent fixes
 │   ├── LAZYGIT_GUIDE.md        # Git made easy with lazygit
 │   ├── RCLONE_GUIDE.md         # Mount Google Drive with rclone
+│   ├── SNAPSHOT_GUIDE.md       # Btrfs snapshot management with Snapper
 │   └── QUICK_REFERENCE.md      # Quick lookup card
 │
 ├── config-backups/              # COSMIC configuration backups
@@ -32,7 +33,8 @@ cosmic-config/
 │
 ├── scripts/                     # Utility scripts
 │   ├── screenshot              # Screenshot tool (grim+slurp+swappy)
-│   └── setup-rclone.sh         # Automated Google Drive setup with rclone
+│   ├── setup-rclone.sh         # Automated Google Drive setup with rclone
+│   └── snapshot-manager.sh     # Btrfs snapshot management with Snapper
 │
 ├── autostart/                   # Autostart applications
 │   ├── copyq.desktop           # Clipboard manager
@@ -121,6 +123,17 @@ Mount Google Drive(s) on your desktop with rclone.
 - Autostart configuration
 - Performance optimization
 - Troubleshooting
+
+### [Snapshot Guide](docs/SNAPSHOT_GUIDE.md)
+Manage system snapshots with Snapper on Btrfs.
+
+**Includes**:
+- Snapshot creation and management
+- Pin important snapshots
+- Restore system to previous state
+- Automatic snapshots before updates
+- Disk space management
+- Snapshot limit configuration (10 max)
 
 ### [Quick Reference](docs/QUICK_REFERENCE.md)
 One-page quick lookup for keybindings and commands. Print this!
