@@ -56,6 +56,28 @@ else
     echo "  qBittorrent autostart backup not found"
 fi
 
+if [ -f autostart/waybar.desktop ]; then
+    if confirm "Restore Waybar autostart?"; then
+        mkdir -p ~/.config/autostart
+        cp autostart/waybar.desktop ~/.config/autostart/
+        echo " Restored Waybar autostart"
+    fi
+else
+    echo "  Waybar autostart backup not found"
+fi
+
+# Restore Waybar config
+if [ -f config-backups/waybar-config.json ] && [ -f config-backups/waybar-style.css ]; then
+    if confirm "Restore Waybar configuration?"; then
+        mkdir -p ~/.config/waybar
+        cp config-backups/waybar-config.json ~/.config/waybar/config
+        cp config-backups/waybar-style.css ~/.config/waybar/style.css
+        echo " Restored Waybar configuration"
+    fi
+else
+    echo "  Waybar config backup not found"
+fi
+
 # Restore screenshot script
 if [ -f scripts/screenshot ]; then
     if confirm "Restore screenshot script?"; then

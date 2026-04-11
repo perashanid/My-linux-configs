@@ -54,7 +54,7 @@ sudo pacman -S --needed --noconfirm \
 
 # Utilities
 echo "Installing utilities..."
-sudo pacman -S --needed --noconfirm fzf wev
+sudo pacman -S --needed --noconfirm fzf wev waybar
 
 # Install Brave browser (Flatpak)
 echo "Installing Brave browser..."
@@ -146,6 +146,26 @@ if [ -f autostart/qbittorrent-autostart.desktop ]; then
     echo "qBittorrent autostart configured"
 else
     echo "WARNING: qBittorrent autostart file not found"
+fi
+
+if [ -f autostart/waybar.desktop ]; then
+    echo "Setting up Waybar autostart..."
+    mkdir -p ~/.config/autostart
+    cp autostart/waybar.desktop ~/.config/autostart/
+    echo "Waybar autostart configured"
+else
+    echo "WARNING: Waybar autostart file not found"
+fi
+
+# Restore Waybar config
+if [ -f config-backups/waybar-config.json ] && [ -f config-backups/waybar-style.css ]; then
+    echo "Restoring Waybar configuration..."
+    mkdir -p ~/.config/waybar
+    cp config-backups/waybar-config.json ~/.config/waybar/config
+    cp config-backups/waybar-style.css ~/.config/waybar/style.css
+    echo "Waybar configuration restored"
+else
+    echo "WARNING: Waybar config files not found"
 fi
 
 # Configure CopyQ

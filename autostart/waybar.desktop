@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Waybar
+Comment=Highly customizable Wayland bar with calendar
+Exec=waybar
+Terminal=false
+Hidden=false
+X-GNOME-Autostart-enabled=true

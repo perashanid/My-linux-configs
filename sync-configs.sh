@@ -43,12 +43,28 @@ else
     echo "  qBittorrent autostart file not found"
 fi
 
+if [ -f ~/.config/autostart/waybar.desktop ]; then
+    cp ~/.config/autostart/waybar.desktop autostart/
+    echo " Synced Waybar autostart"
+else
+    echo "  Waybar autostart file not found"
+fi
+
 # Sync screenshot script
 if [ -f ~/.local/bin/screenshot ]; then
     cp ~/.local/bin/screenshot scripts/
     echo " Synced screenshot script"
 else
     echo "  Screenshot script not found"
+fi
+
+# Sync Waybar config
+if [ -f ~/.config/waybar/config ] && [ -f ~/.config/waybar/style.css ]; then
+    cp ~/.config/waybar/config config-backups/waybar-config.json
+    cp ~/.config/waybar/style.css config-backups/waybar-style.css
+    echo " Synced Waybar config"
+else
+    echo "  Waybar config not found"
 fi
 
 # Sync SDDM config (requires sudo)
