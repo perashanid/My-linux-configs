@@ -60,6 +60,10 @@ sudo pacman -S --needed --noconfirm fzf wev waybar
 echo "Installing Brave browser..."
 flatpak install -y flathub com.brave.Browser 2>/dev/null || echo "Brave already installed or flatpak not available"
 
+# Terminal tools
+echo "Installing terminal tools..."
+sudo pacman -S --needed --noconfirm ghostty bash tmux
+
 echo ""
 echo "=========================================="
 echo "Step 2: Configuring System"
@@ -122,6 +126,38 @@ if [ -f scripts/screenshot ]; then
     echo "Screenshot script installed"
 else
     echo "WARNING: Screenshot script not found"
+fi
+
+# Restore terminal configs
+echo "Restoring terminal configurations..."
+
+if [ -f config-backups/ghostty-config ]; then
+    mkdir -p ~/.config/ghostty
+    cp config-backups/ghostty-config ~/.config/ghostty/config
+    echo "Ghostty config restored"
+else
+    echo "WARNING: Ghostty config not found"
+fi
+
+if [ -f config-backups/bashrc ]; then
+    cp config-backups/bashrc ~/.bashrc
+    echo "Bash config restored"
+else
+    echo "WARNING: Bash config not found"
+fi
+
+if [ -f config-backups/bash_profile ]; then
+    cp config-backups/bash_profile ~/.bash_profile
+    echo "Bash profile restored"
+else
+    echo "WARNING: Bash profile not found"
+fi
+
+if [ -f config-backups/tmux.conf ]; then
+    cp config-backups/tmux.conf ~/.tmux.conf
+    echo "Tmux config restored"
+else
+    echo "WARNING: Tmux config not found"
 fi
 
 echo ""
@@ -209,9 +245,11 @@ echo ""
 echo "What was installed:"
 echo "  - All required packages (Docker, Obsidian, VS Code, CopyQ, qBittorrent, etc.)"
 echo "  - Screenshot tools (Flameshot, grim, slurp, swappy)"
+echo "  - Terminal tools (Ghostty, Bash, Tmux)"
 echo "  - COSMIC keybindings and keyboard config"
 echo "  - Autostart applications (CopyQ, qBittorrent)"
 echo "  - Screenshot script"
+echo "  - Terminal configurations (Ghostty, Bash, Tmux)"
 echo ""
 echo "IMPORTANT - Next Steps:"
 echo "  1. LOG OUT AND BACK IN (required for Docker and locale changes)"

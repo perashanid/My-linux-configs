@@ -1,0 +1,27 @@
+
+# Developer aliases
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log --oneline'
+
+# Better history
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignoredups:erasedups
+
+# Colored output
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+
+# Path additions
+export PATH="$HOME/.local/bin:$HOME/.npm-global/bin:$PATH"
+
+bind 'set enable-bracketed-paste off'
+bind 'set enable-bracketed-paste off'

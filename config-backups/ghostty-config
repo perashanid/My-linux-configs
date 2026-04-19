@@ -1,0 +1,20 @@
+# Font
+font-size = 13
+
+# Theme
+background = #0a1628
+foreground = #c5d4eb
+background-opacity = 0.92
+
+# Window
+window-padding-x = 12
+window-padding-y = 12
+
+# Clipboard - DISABLE bracketed paste
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = false
+clipboard-paste-bracketed-safe = false
+
+# Performance
+scrollback-limit = 100000

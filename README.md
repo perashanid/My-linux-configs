@@ -18,6 +18,7 @@ cosmic-config/
 │
 ├── docs/                        # All documentation
 │   ├── COSMIC_SETUP_GUIDE.md   # Complete setup guide (30 min install)
+│   ├── TERMINAL_SETUP_GUIDE.md # Terminal setup (Ghostty, Bash, Tmux)
 │   ├── BUTTON_CONFIG_REFERENCE.md  # Configure buttons (screenshot, pause, lock, etc.)
 │   ├── ADDITIONAL_CONFIGS.md   # Battery management, qBittorrent fixes
 │   ├── LAZYGIT_GUIDE.md        # Git made easy with lazygit
@@ -30,7 +31,11 @@ cosmic-config/
 │   ├── cosmic_shortcuts.ron    # Custom keybindings
 │   ├── cosmic_keyboard_config  # Keyboard repeat settings
 │   ├── shortcuts_custom        # (copy for restoration)
-│   └── xkb_config             # (copy for restoration)
+│   ├── xkb_config             # (copy for restoration)
+│   ├── ghostty-config         # Ghostty terminal config
+│   ├── bashrc                 # Bash shell config
+│   ├── bash_profile           # Bash profile
+│   └── tmux.conf              # Tmux multiplexer config
 │
 ├── scripts/                     # Utility scripts
 │   ├── screenshot              # Screenshot tool (grim+slurp+swappy)
@@ -92,6 +97,16 @@ Complete guide from fresh install to fully configured system in ~30 minutes.
 - All keybindings reference
 - Installed applications
 - Troubleshooting
+
+### [Terminal Setup Guide](docs/TERMINAL_SETUP_GUIDE.md)
+Complete terminal configuration with Ghostty, Bash, and Tmux.
+
+**Includes**:
+- Ghostty terminal emulator setup
+- Bash aliases and customization
+- Tmux session management
+- Integration with COSMIC Desktop
+- Workflow examples
 
 ### [Button Configuration Reference](docs/BUTTON_CONFIG_REFERENCE.md)
 How to configure special buttons in COSMIC Desktop.
@@ -252,6 +267,11 @@ copyq toggle
 - Obsidian
 - lazygit
 
+### Terminal
+- Ghostty (GPU-accelerated terminal)
+- Bash (customized shell)
+- Tmux (session multiplexer)
+
 ### System Tools
 - CopyQ (clipboard manager)
 - qBittorrent (torrent client)
@@ -260,6 +280,7 @@ copyq toggle
 
 ### Desktop
 - cosmic-term (terminal)
+- Ghostty (alternative terminal)
 - Dolphin (file manager)
 - Brave (browser - Flatpak)
 - cosmic-edit (text editor)
@@ -315,7 +336,9 @@ cd cosmic-config
 **OS**: CachyOS  
 **DE**: COSMIC (Wayland)  
 **DM**: SDDM (Honkai: Star Rail theme)  
-**Terminal**: cosmic-term  
+**Terminal**: Ghostty + cosmic-term  
+**Shell**: Bash (customized)  
+**Multiplexer**: Tmux  
 **File Manager**: Dolphin  
 **Browser**: Brave (Flatpak)  
 **Clipboard**: CopyQ  

@@ -43,12 +43,53 @@ Fast lookup for common tasks and keybindings.
 
 ---
 
+##  Terminal Quick Reference
+
+### Bash Aliases
+| Alias | Command | Description |
+|-------|---------|-------------|
+| `ll` | `ls -lah` | List all files |
+| `..` | `cd ..` | Go up one directory |
+| `...` | `cd ../..` | Go up two directories |
+| `gs` | `git status` | Git status |
+| `ga` | `git add` | Git add |
+| `gc` | `git commit` | Git commit |
+| `gp` | `git push` | Git push |
+| `gl` | `git log --oneline` | Compact git log |
+
+### Tmux Essentials
+| Key | Action |
+|-----|--------|
+| `Ctrl+b` then `\|` | Split vertically |
+| `Ctrl+b` then `-` | Split horizontally |
+| `Ctrl+b` then `c` | New window |
+| `Ctrl+b` then `d` | Detach session |
+| `Ctrl+b` then `[` | Scroll mode |
+| `Ctrl+b` then `arrow` | Navigate panes |
+
+### Tmux Sessions
+```bash
+tmux new -s name    # Create session
+tmux ls             # List sessions
+tmux attach -t name # Attach to session
+```
+
+---
+
 ##  Important File Locations
 
 ### COSMIC Configs
 ```
 ~/.config/cosmic/com.system76.CosmicSettings.Shortcuts/v1/custom
 ~/.config/cosmic/com.system76.CosmicComp/v1/xkb_config
+```
+
+### Terminal Configs
+```
+~/.config/ghostty/config
+~/.bashrc
+~/.bash_profile
+~/.tmux.conf
 ```
 
 ### Autostart
@@ -148,6 +189,11 @@ sudo pacman -S grim slurp swappy flameshot
 sudo pacman -S dolphin cosmic-term playerctl
 ```
 
+### Terminal Tools
+```bash
+sudo pacman -S ghostty bash tmux
+```
+
 ### Brave Browser
 ```bash
 flatpak install flathub com.brave.Browser
@@ -167,6 +213,7 @@ wev
 ##  Full Documentation
 
 - **Setup Guide**: [COSMIC_SETUP_GUIDE.md](COSMIC_SETUP_GUIDE.md)
+- **Terminal Setup**: [TERMINAL_SETUP_GUIDE.md](TERMINAL_SETUP_GUIDE.md)
 - **Button Config**: [BUTTON_CONFIG_REFERENCE.md](BUTTON_CONFIG_REFERENCE.md)
 - **Additional Configs**: [ADDITIONAL_CONFIGS.md](ADDITIONAL_CONFIGS.md)
 - **Git Guide**: [LAZYGIT_GUIDE.md](LAZYGIT_GUIDE.md)

@@ -100,14 +100,58 @@ else
     echo "  SDDM config backup not found"
 fi
 
+# Restore terminal configs
+echo ""
+echo " Restoring terminal configurations..."
+
+if [ -f config-backups/ghostty-config ]; then
+    if confirm "Restore Ghostty config?"; then
+        mkdir -p ~/.config/ghostty
+        cp config-backups/ghostty-config ~/.config/ghostty/config
+        echo " Restored Ghostty config"
+    fi
+else
+    echo "  Ghostty config backup not found"
+fi
+
+if [ -f config-backups/bashrc ]; then
+    if confirm "Restore Bash config?"; then
+        cp config-backups/bashrc ~/.bashrc
+        echo " Restored Bash config"
+    fi
+else
+    echo "  Bash config backup not found"
+fi
+
+if [ -f config-backups/bash_profile ]; then
+    if confirm "Restore Bash profile?"; then
+        cp config-backups/bash_profile ~/.bash_profile
+        echo " Restored Bash profile"
+    fi
+else
+    echo "  Bash profile backup not found"
+fi
+
+if [ -f config-backups/tmux.conf ]; then
+    if confirm "Restore Tmux config?"; then
+        cp config-backups/tmux.conf ~/.tmux.conf
+        echo " Restored Tmux config"
+    fi
+else
+    echo "  Tmux config backup not found"
+fi
+
 echo ""
 echo " Restore complete!"
 echo ""
 echo "Next steps:"
-echo "  1. Restart COSMIC settings daemon:"
+echo "  1. Reload Bash config:"
+echo "     source ~/.bashrc"
+echo ""
+echo "  2. Restart COSMIC settings daemon:"
 echo "     killall cosmic-settings-daemon && cosmic-settings-daemon &"
 echo ""
-echo "  2. Or restart compositor:"
+echo "  3. Or restart compositor:"
 echo "     cosmic-comp --replace &"
 echo ""
-echo "  3. Or log out and back in for full effect"
+echo "  4. Or log out and back in for full effect"

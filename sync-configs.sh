@@ -76,6 +76,38 @@ else
     echo "  SDDM config file not found"
 fi
 
+# Sync terminal configs
+echo ""
+echo " Syncing terminal configs..."
+
+if [ -f ~/.config/ghostty/config ]; then
+    cp ~/.config/ghostty/config config-backups/ghostty-config
+    echo " Synced Ghostty config"
+else
+    echo "  Ghostty config not found"
+fi
+
+if [ -f ~/.bashrc ]; then
+    cp ~/.bashrc config-backups/bashrc
+    echo " Synced Bash config"
+else
+    echo "  Bash config not found"
+fi
+
+if [ -f ~/.bash_profile ]; then
+    cp ~/.bash_profile config-backups/bash_profile
+    echo " Synced Bash profile"
+else
+    echo "  Bash profile not found"
+fi
+
+if [ -f ~/.tmux.conf ]; then
+    cp ~/.tmux.conf config-backups/tmux.conf
+    echo " Synced Tmux config"
+else
+    echo "  Tmux config not found"
+fi
+
 echo ""
 echo " Sync complete!"
 echo ""
